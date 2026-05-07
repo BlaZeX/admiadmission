@@ -1,0 +1,173 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import AdmissionSteps from '../components/AdmissionSteps.astro';
+import VideoGuide from '../components/VideoGuide.astro';
+import CurriculumPreview from '../components/CurriculumPreview.astro';
+import FAQ from '../components/FAQ.astro';
+import Contact from '../components/Contact.astro';
+
+const samarth = 'https://muugadmission.samarth.edu.in/';
+const differentCards = [
+  ['🛒', 'Practical retail learning', 'Learn the day-to-day skills used in stores, malls, supermarkets and modern retail teams.'],
+  ['🤝', 'Apprenticeship embedded approach', 'Understand business through apprenticeship-oriented training and workplace exposure.'],
+  ['📦', 'Retail + e-commerce exposure', 'Explore store operations along with online selling, inventory, logistics and customer experience.'],
+  ['🎯', 'Skill-focused curriculum', 'Build useful skills in communication, sales, merchandising, technology and management.'],
+  ['🏢', 'Industry-oriented learning', 'Study concepts that connect with organized retail, e-commerce and modern business roles.'],
+  ['📚', 'Strong commerce foundation', 'Get a B.Com foundation with focused learning for retail operations and business careers.'],
+];
+const careers = ['Store Manager', 'Retail Executive', 'Inventory Executive', 'Customer Relationship Executive', 'Retail Marketing Executive', 'Supply Chain Coordinator', 'E-commerce Operations Associate', 'Visual Merchandiser'];
+const highlights = [
+  ['🏛️', 'NEP 2020 structure'],
+  ['📈', 'Career-focused progression'],
+  ['🤝', 'Apprenticeship exposure'],
+  ['🛍️', 'Retail specialization'],
+  ['🌐', 'E-commerce and omnichannel retailing'],
+  ['💻', 'OJT / ERP exposure'],
+  ['🗣️', 'Communication and management skills'],
+  ['🤲', 'Sales and negotiation skills'],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B.Com Retail Operations Management AEDP Admissions 2026 | ADMI University of Mumbai</title>
+    <meta name="description" content="Admissions open for B.Com (Retail Operations Management) (AEDP) at Alkesh Dinesh Mody Institute, University of Mumbai. Apply online through Samarth Portal before institute-level admission." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="B.Com Retail Operations Management AEDP Admissions 2026 | ADMI University of Mumbai" />
+    <meta property="og:description" content="Admissions open for B.Com (Retail Operations Management) (AEDP) at Alkesh Dinesh Mody Institute, University of Mumbai. Apply online through Samarth Portal before institute-level admission." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Hero />
+
+      <section id="programme" class="py-16 sm:py-20">
+        <div class="section-shell">
+          <SectionTitle eyebrow="Why choose this degree" title="Why This Programme is Different" description="A simple, career-focused commerce degree for students who want practical learning and clearer job pathways after graduation." />
+          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {differentCards.map(([icon, title, description]) => <FeatureCard icon={icon} title={title} description={description} />)}
+          </div>
+        </div>
+      </section>
+
+      <section id="careers" class="bg-gradient-to-b from-white to-skysoft py-16 sm:py-20">
+        <div class="section-shell">
+          <SectionTitle eyebrow="Career opportunities" title="Roles students can prepare for" description="Retail is a large modern business sector. This programme helps students build confidence for operations, customer, sales, inventory and e-commerce roles." />
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {careers.map((career) => (
+              <article class="card-hover rounded-3xl border border-white bg-white p-5 shadow-card">
+                <div class="mb-4 h-2 w-16 rounded-full bg-gradient-to-r from-brand to-blue-400"></div>
+                <h3 class="text-lg font-extrabold text-navy">{career}</h3>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20">
+        <div class="section-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <SectionTitle align="left" eyebrow="Why retail" title="Retail today is much bigger than shops" description="Retail includes e-commerce, logistics, customer experience, merchandising, digital tools, inventory, marketing and sales. The programme prepares students for organized retail, e-commerce and modern business roles." />
+          <div class="rounded-[2rem] bg-gradient-to-br from-navy to-blue-700 p-8 text-white shadow-soft">
+            <h3 class="font-display text-3xl font-extrabold">For students who want a practical business degree</h3>
+            <p class="mt-4 leading-7 text-blue-100">If you are confused about what to do after 12th, this degree gives you a commerce foundation plus focused exposure to real business functions used by retail and e-commerce companies.</p>
+            <a class="mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy" href="#admission-process">See admission steps</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="admission-process" class="bg-mist/50 py-16 sm:py-20">
+        <div class="section-shell">
+          <SectionTitle eyebrow="Admission process" title="Follow these steps carefully" description="Complete the online admission first on the Mumbai University Samarth Portal. Then visit the institute for offline confirmation and document verification." />
+          <AdmissionSteps />
+        </div>
+      </section>
+
+      <section id="videos" class="py-16 sm:py-20">
+        <div class="section-shell">
+          <SectionTitle eyebrow="Admission help videos" title="Watch the step-by-step admission guide" description="These videos help students and parents understand Samarth registration, programme selection and final submission." />
+          <VideoGuide />
+        </div>
+      </section>
+
+      <section class="bg-white py-16 sm:py-20">
+        <div class="section-shell grid gap-8 lg:grid-cols-2">
+          <div class="rounded-[2rem] border border-slate-100 bg-skysoft p-8 shadow-card">
+            <SectionTitle align="left" eyebrow="Eligibility" title="Simple eligibility details" description="Keep documents ready before you start the online application." />
+            <ul class="space-y-4 text-slate-700">
+              <li class="flex gap-3"><span class="font-extrabold text-brand">✓</span>12th passed or equivalent as per University of Mumbai norms</li>
+              <li class="flex gap-3"><span class="font-extrabold text-brand">✓</span>Admission as per University rules</li>
+              <li class="flex gap-3"><span class="font-extrabold text-brand">✓</span>Intake: 30 seats</li>
+            </ul>
+            <a class="btn-primary mt-8" href="/assets/syllabus-placeholder.pdf" download>Download Detailed Syllabus</a>
+          </div>
+          <div class="rounded-[2rem] border border-amber-200 bg-amber-50 p-8 shadow-card">
+            <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-amber-700">Important reminder</p>
+            <h3 class="mt-3 font-display text-3xl font-extrabold text-navy">Apply online before institute admission</h3>
+            <p class="mt-4 leading-7 text-slate-700">Admissions are open from <strong>6 May 2026 to 21 May 2026</strong>. Students must first complete online admission through the Mumbai University Samarth portal.</p>
+            <a class="btn-secondary mt-8" href={samarth} target="_blank" rel="noopener noreferrer">Open Samarth Portal</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20">
+        <div class="section-shell">
+          <SectionTitle eyebrow="Programme highlights" title="Designed for practical business skills" description="The course blends commerce, retail operations, e-commerce, communication and apprenticeship-oriented learning." />
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {highlights.map(([icon, title]) => <FeatureCard icon={icon} title={title} />)}
+          </div>
+        </div>
+      </section>
+
+      <section id="curriculum" class="bg-gradient-to-b from-skysoft to-white py-16 sm:py-20">
+        <div class="section-shell">
+          <SectionTitle eyebrow="Curriculum preview" title="What students will study" description="A semester-wise preview in simple cards. Replace the placeholder syllabus PDF with the official detailed syllabus before launch." />
+          <CurriculumPreview />
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20">
+        <div class="section-shell grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+          <div>
+            <SectionTitle align="left" eyebrow="RASCI / Industry" title="Industry-relevant learning approach" description="The curriculum is aligned with practical retail skills and the needs of organized retail and e-commerce sectors." />
+            <div class="grid gap-4 sm:grid-cols-3">
+              {['RASCI-aligned and industry-relevant curriculum', 'Exposure to organized retail and e-commerce sectors', 'Skill-based learning'].map((item) => (
+                <div class="rounded-3xl border border-slate-100 bg-white p-5 font-bold leading-6 text-navy shadow-card">{item}</div>
+              ))}
+            </div>
+          </div>
+          <img class="rounded-[2rem] shadow-card" src="/assets/rasci-placeholder.svg" alt="Placeholder for RASCI or industry partner logo" loading="lazy" />
+        </div>
+      </section>
+
+      <section id="faq" class="bg-mist/50 py-16 sm:py-20">
+        <div class="section-shell">
+          <SectionTitle eyebrow="FAQ" title="Common questions from students and parents" description="Clear answers to help you avoid confusion during admission." />
+          <FAQ />
+        </div>
+      </section>
+
+      <section id="contact" class="py-16 pb-28 sm:py-20">
+        <div class="section-shell">
+          <SectionTitle eyebrow="Contact" title="Admission support and institute address" description="No backend form is included; update official contact details before launch." />
+          <Contact />
+        </div>
+      </section>
+    </main>
+    <footer class="border-t border-slate-200 bg-white py-8">
+      <div class="section-shell flex flex-col gap-4 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Alkesh Dinesh Mody Institute for Financial & Management Studies, University of Mumbai.</p>
+        <a class="font-extrabold text-brand" href={samarth} target="_blank" rel="noopener noreferrer">Mumbai University Samarth Portal</a>
+      </div>
+    </footer>
+  </body>
+</html>
