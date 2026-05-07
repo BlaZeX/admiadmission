@@ -5,7 +5,7 @@
 :root {
   color-scheme: light;
   --navy: #0b1744;
-  --purple: #7c3aed;
+  --brand: #2563eb;
 }
 
 html {
@@ -17,7 +17,7 @@ body {
   background: #fbfcff;
   color: #172033;
   font-family:
-    "Inter",
+    "Roboto",
     ui-sans-serif,
     system-ui,
     -apple-system,
@@ -28,7 +28,7 @@ body {
 }
 
 ::selection {
-  background: rgba(124, 58, 237, 0.18);
+  background: rgba(37, 99, 235, 0.18);
 }
 
 .section-shell {
@@ -36,11 +36,11 @@ body {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-purple px-6 py-3 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-violet-700 focus:outline-none focus:ring-4 focus:ring-violet-200;
+  @apply inline-flex items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-bold text-navy shadow-sm transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-lavender focus:outline-none focus:ring-4 focus:ring-violet-100;
+  @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-bold text-navy shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:bg-mist focus:outline-none focus:ring-4 focus:ring-blue-100;
 }
 
 .card-hover {

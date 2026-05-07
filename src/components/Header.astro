@@ -13,15 +13,15 @@ const samarth = 'https://muugadmission.samarth.edu.in/';
 <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
   <div class="section-shell flex min-h-20 items-center justify-between gap-4">
     <a href="#top" class="flex items-center gap-3" aria-label="ADMI admissions home">
-      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-navy text-sm font-black text-white shadow-card">ADMI</span>
+      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-navy to-brand text-sm font-black text-white shadow-card">ADMI</span>
       <span class="max-w-[13rem] text-sm font-extrabold leading-tight text-navy sm:max-w-xs">
         Alkesh Dinesh Mody Institute<br /><span class="font-semibold text-slate-500">University of Mumbai</span>
       </span>
     </a>
     <nav class="hidden items-center gap-5 text-sm font-semibold text-slate-600 lg:flex" aria-label="Primary navigation">
-      {navItems.map(([label, href]) => <a class="transition hover:text-purple" href={href}>{label}</a>)}
+      {navItems.map(([label, href]) => <a class="transition hover:text-brand" href={href}>{label}</a>)}
     </nav>
     <a class="btn-primary hidden sm:inline-flex" href={samarth} target="_blank" rel="noopener noreferrer">Apply Now</a>
   </div>
 </header>
-<a class="fixed bottom-4 left-4 right-4 z-50 flex items-center justify-center rounded-full bg-purple px-6 py-4 text-sm font-extrabold text-white shadow-soft sm:hidden" href={samarth} target="_blank" rel="noopener noreferrer">Apply Now on Samarth Portal</a>
+<a class="fixed bottom-4 left-4 right-4 z-50 flex items-center justify-center rounded-full bg-brand px-6 py-4 text-sm font-extrabold text-white shadow-soft sm:hidden" href={samarth} target="_blank" rel="noopener noreferrer">Apply Now on Samarth Portal</a>

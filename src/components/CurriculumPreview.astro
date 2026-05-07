@@ -13,10 +13,10 @@ const semesters = [
     <details class="group rounded-3xl border border-slate-100 bg-white p-6 shadow-card" open={semester === 'Semester I'}>
       <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-extrabold text-navy">
         {semester}
-        <span class="rounded-full bg-lavender px-3 py-1 text-sm text-purple transition group-open:rotate-45">+</span>
+        <span class="rounded-full bg-mist px-3 py-1 text-sm text-brand transition group-open:rotate-45">+</span>
       </summary>
       <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
-        {subjects.map((subject) => <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-purple"></span><span>{subject}</span></li>)}
+        {subjects.map((subject) => <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand"></span><span>{subject}</span></li>)}
       </ul>
     </details>
   ))}
