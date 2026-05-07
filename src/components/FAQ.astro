@@ -1,0 +1,25 @@
+---
+const faqs = [
+  ['Is this a regular University of Mumbai degree?', 'Yes. This is a B.Com degree offered under the University of Mumbai framework, with a focused specialization in Retail Operations Management.'],
+  ['What is AEDP?', 'AEDP means Apprenticeship Embedded Degree Programme. It combines degree learning with practical, work-oriented exposure so students can understand how modern business works.'],
+  ['Is online registration compulsory?', 'Yes. Students must first complete online admission through the Mumbai University Samarth portal.'],
+  ['Can offline admission be done without Samarth registration?', 'No. Offline admission at the institute cannot be completed without online admission on the Samarth portal.'],
+  ['What is the eligibility?', 'Students should have passed Class 12 or equivalent as per University of Mumbai norms. Admission is as per University rules.'],
+  ['What careers can students pursue?', 'Students can explore roles in organized retail, e-commerce operations, store operations, inventory, customer relationship, retail marketing, supply chain and merchandising.'],
+  ['Is apprenticeship included?', 'Yes. The programme includes apprenticeship-oriented learning and apprenticeship components in the later semesters.'],
+  ['What is the intake capacity?', 'The intake capacity is 30 seats.'],
+  ['Can students pursue higher studies after this degree?', 'Yes. Students can pursue higher studies as permitted under applicable University rules and eligibility conditions.'],
+  ['Where is the institute located?', 'The institute is located at Joraver Bhavan, University of Mumbai, Vidyanagari Campus, Santacruz (E), Mumbai - 400098.'],
+];
+---
+<div class="mx-auto max-w-4xl space-y-4">
+  {faqs.map(([question, answer]) => (
+    <details class="group rounded-3xl border border-slate-100 bg-white p-6 shadow-card">
+      <summary class="flex cursor-pointer list-none items-start justify-between gap-4 font-extrabold text-navy">
+        <span>{question}</span>
+        <span class="rounded-full bg-mist px-3 py-1 text-sm text-brand transition group-open:rotate-45">+</span>
+      </summary>
+      <p class="mt-4 leading-7 text-slate-600">{answer}</p>
+    </details>
+  ))}
+</div>
